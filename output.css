@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+/* background */
+
+/* Profile photo */
+@keyframes dropBounce {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(20px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.profile-animate {
+  animation: dropBounce 1s ease-out forwards;
+}
+
+
+/* Font */
+.ubuntu-light {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.slideshow-container {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 12px;
+  color: white;
+  font-size: 22px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 50%;
+}
+
+.next { right: 0; }
+
+.dot {
+  height: 14px;
+  width: 14px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.active { background-color: #166534; }
+
+.fade {
+  animation: fade 1s;
+}
+
+@keyframes fade {
+  from { opacity: .4 }
+  to { opacity: 1 }
+}
+
+.badge {
+  background: #bbf7d0;
+  color: #166534;
+  border-radius: 9999px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 6px;
+  margin: 4px;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.hr {
+  width: 24%;
+  height: 1px;
+  background-color: #bbf7d0; /* green-200 */
+  margin: 1.5rem 0;
+}
+
+.b-logo
+  {
+  box-shadow:10px 10px 10px;
+}
+.basith {
+  text-shadow: 2px 2px;
+}

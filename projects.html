@@ -1,0 +1,522 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Basith</title>
+  <link rel="icon" type="image/x-icon" class="rounded-full" href="./assets/B.jpg">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  
+  <!-- My logo shadow style -->
+  <style>
+  @keyframes textGlow {
+    0%, 100% {
+      text-shadow:
+        0 0 8px rgba(254, 248, 248, 0.942),
+        0 0 16px #67ee67;
+    }
+    50% {
+      text-shadow:
+        0 0 14px rgba(15, 15, 15, 0.9),
+        0 0 30px rgba(1, 11, 4, 0.6);
+    }
+  }
+  .logo-glow {
+    animation: textGlow 2.5s ease-in-out infinite;
+  }
+  </style>
+
+  <style>
+    /* initial hidden state */
+    .slide-left,
+    .slide-right {
+      opacity: 0;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-out;
+    }
+
+    /* left to center */
+    .slide-left {
+      transform: translateX(-80px);
+      animation-name: slideFromLeft;
+    }
+
+    /* right to center */
+    .slide-right {
+      transform: translateX(80px);
+      animation-name: slideFromRight;
+    }
+
+    @keyframes slideFromLeft {
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideFromRight {
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  </style>
+
+  <!-- Menu vertical line -->
+  <style>
+  .vl {
+    border-left: 1px solid rgb(27, 140, 27);
+    height: 15px;
+  }
+  </style>
+
+
+  <style>
+  .nav-btn {
+    width: 100%;
+    text-align: left;
+    padding: 8px 12px;
+    border-radius: 9999px;
+  }
+  .nav-btn:hover {
+    background: #16a34a;
+  }
+</style>
+
+<!-- Skills set css -->
+<style>
+.skills-set
+  {
+  box-shadow:6px 6px 6px;
+  color: #A7F3D0;
+}
+</style>
+
+<script>
+  module.exports = {
+    theme: {
+      extend: {
+        fontFamily: {
+          ubuntu: ['Ubuntu', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+
+</head>
+<body class=" ubuntu-light">  
+  <section aria-labelledby="Body-section" class="container mx-auto px-8">
+    <section aria-labelledby="Parent" class="flex items-center justify-between bg-green-200 rounded-full my-8 px-8 py-4">
+      <!-- Logo -->
+      <div aria-labelledby="Logo" class="flex items-center justify-center gap-2">
+        <img src="./assets/B.jpg" class="w-6 rounded-full" />
+        <p class="logo-glow font-semibold text-sm md:text-2xl text-green-900 ubuntu-light">
+          BASITH
+        </p>
+      </div>
+      <!-- Navigation -->
+      <div class="hidden md:block">
+        <ul aria-labelledby="Navigation" class="flex items-center gap-8">
+          <a href="/"><li class="text-xs md:text-sm text-green-900 font-bold cursor-pointer transition">Works</li></a>
+          <div class="vl"></div>
+          <a href="/projects.html"><li class="text-xs md:text-sm text-green-900 font-bold cursor-pointer transition">Projects</li></a>
+          <div class="vl"></div>
+          <li class="text-xs md:text-sm bg-green-900 text-green-200 hover:bg-green-900 hover:text-green-200 
+                    shadow-2xl font-bold px-4 py-2 rounded-full cursor-pointer transition">
+            Contact Us
+          </li>
+        </ul>
+      </div>
+      <!-- Mobile Menu -->
+      <div class="flex items-center md:hidden text-green-800 text-sm md:text-2xl font-bold gap-1">
+        MENU
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+          viewBox="0 0 256 256">
+          <path
+            d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z">
+          </path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Capture your Mac's -->
+    <section aria-labelledby="Capture-section" class="">
+      <div aria-labelledby="Left-content" class="flex flex-col gap-3 pb-8 md:my-16 lg:my-28">
+        <div class="flex flex-col gap-6">
+          <h1 aria-labelledby="Capture" class="text-4xl md:text-7xl text-green-200 ubuntu-light">Basith Abdul Kader</h1>
+          <h1 aria-labelledby="Capture" class="text-sm md:text-2xl text-gray-200 font-semibold">FRONT END DEVELOPER</h1>
+          <h1 aria-labelledby="Capture" class="text-gray-200 text-xs md:font-semibold">I build accessible, pixel-perfect digital <br> experiences for the webpages.
+          </h1>
+        </div>
+        <marquee width="full" direction="right" scrollamount="2" height="30px">
+          <div class="flex items-center justify-center gap-6 text-green-200">
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/basith.bass.480240" target="_blank" aria-label="Facebook"
+              class="hover:text-white transition">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 256 256">
+                <path d="M232,128a104,104,0,1,0-120,103.7V158H88V128h24V104c0-23.7,14.3-36.8,35.3-36.8A143.5,143.5,0,0,1,168,69v24h-12c-11.8,0-15.5,7.3-15.5,14.8V128h26l-4.2,30H140.5v73.7A104,104,0,0,0,232,128Z"/>
+              </svg>
+            </a>
+
+            <!-- X (Twitter) -->
+            <a href="https://x.com/BasithA34171943" target="_blank" aria-label="X"
+              class="hover:text-white transition">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 256 256">
+                <path d="M215.7,40H176L128,96.6,80,40H40l66.7,80L40,216H80l48-56.6L176,216h39.7l-66.7-80Z"/>
+              </svg>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/Basithabdu" target="_blank" aria-label="GitHub"
+              class="hover:text-white transition">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 256 256">
+                <path d="M128,24A104,104,0,0,0,24,128c0,45.2,29.5,83.5,70.4,97.1,5.1.9,7-2.2,7-4.9,0-2.4-.1-10.2-.1-18.5-28.6,6.2-34.6-12.1-34.6-12.1-4.7-11.9-11.5-15.1-11.5-15.1-9.4-6.4.7-6.3.7-6.3,10.4.7,15.9,10.7,15.9,10.7,9.2,15.9,24.2,11.3,30.1,8.6.9-6.7,3.6-11.3,6.5-13.9-22.8-2.6-46.8-11.4-46.8-50.7a39.7,39.7,0,0,1,10.6-27.6c-1.1-2.6-4.6-13.1,1-27.4,0,0,8.6-2.8,28.2,10.5a97.6,97.6,0,0,1,51.4,0c19.6-13.3,28.2-10.5,28.2-10.5,5.6,14.3,2.1,24.8,1,27.4A39.7,39.7,0,0,1,192,123c0,39.4-24.1,48.1-47,50.7,3.7,3.2,7,9.4,7,18.9,0,13.7-.1,24.7-.1,28.1,0,2.7,1.9,5.9,7.1,4.9A104,104,0,0,0,232,128,104,104,0,0,0,128,24Z"/>
+              </svg>
+            </a>
+
+            <!-- YouTube -->
+            <a href="https://www.youtube.com/@mpmnot5456" target="_blank" aria-label="YouTube"
+              class="hover:text-white transition">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 256 256">
+                <path d="M232,128c0-35.3-2.4-44.4-6.9-52.4a32,32,0,0,0-14.7-14.7C202.4,56.4,193.3,54,128,54s-74.4,2.4-82.4,6.9A32,32,0,0,0,30.9,75.6C26.4,83.6,24,92.7,24,128s2.4,44.4,6.9,52.4a32,32,0,0,0,14.7,14.7c8,4.5,17.1,6.9,82.4,6.9s74.4-2.4,82.4-6.9a32,32,0,0,0,14.7-14.7C229.6,172.4,232,163.3,232,128ZM104,160V96l56,32Z"/>
+              </svg>
+            </a>
+          </div>
+        </marquee>
+      </div>    
+    </section>
+
+    <!-- About -->
+    <section aria-labelledby="About-section" class="">
+      <div aria-labelledby="About-content" class="py-5">
+        <h1 class="text-2xl text-green-200 font-bold mb-5">ABOUT</h1>
+        <div class="text-sm md:text-base flex flex-col bg-green-200 rounded-2xl my-8 px-8 py-4">
+          <p class="text-green-800 mb-5">I’m a developer passionate about crafting accessible, pixel-perfect user interfaces that blend thoughtful design with robust engineering. My favorite work lies at the intersection of design and development, creating experiences that not only look great but are meticulously built for performance and usability.</p>
+          <p class="text-green-800 mb-5">Currently, I'm a Front-End Developer (IU) at <span class="text-green-800 font-bold">Plestar Inc,</span> specializing in accessibility. I contribute to the creation and maintenance of UI components that power Klaviyo’s frontend, ensuring our platform meets web accessibility standards and best practices to deliver an inclusive user experience.
+          </p>
+          <p class="text-green-800 mb-5">In the past, I've had the opportunity to develop software across a variety of settings — from <span class="text-green-800 font-bold">advertising agencies</span> and <span class="text-green-800 font-bold">large corporations</span> to <span class="text-green-800 font-bold">start-ups </span>and <span class="text-green-800 font-bold">small digital product studios</span>. Additionally, I also released a comprehensive video course a few years ago, guiding learners through building a websites with the static and dynamic projects.
+          </p>
+          <p class="text-green-800 mb-5 flex">In my spare time, I’m usually climbing, playing tennis, hanging out with my wife and two cats, or running around Hyrule searching for Out of Station.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <script>
+      function showSection(id) {
+        const sections = document.querySelectorAll('.content-section');
+        sections.forEach(section => {
+          section.classList.add('hidden');
+        });
+        document.getElementById(id).classList.remove('hidden');
+      }
+      // Optional: show first section on load
+      window.onload = () => showSection('plestar-current');
+    </script>
+
+    <section aria-labelledby="Experience-section" class="">
+      <!-- Current Position -->
+      <h1 class="text-2xl text-green-200 font-bold mb-5">EXPERIENCE</h1>
+    </section>
+    <section class="flex flex-col gap-6 py-5">
+      <!-- NAV -->
+      <nav class="w-full bg-green-200 p-4 rounded-xl">
+        <ul class="space-y-3 font-bold">
+          <li>
+            <button onclick="showSection('plestar-current')" class="nav-btn bg-green-800 text-green-200 text-sm md:text-base">
+              Plestar Inc @ (NOV 2024 - PRESENT)
+            </button>
+          </li>
+          <li>
+            <button onclick="showSection('brassy-academy')" class="nav-btn bg-green-800 text-green-200 text-sm md:text-base">
+              Brassy Academy & Consultancy Pvt Ltd
+            </button>
+          </li>
+          <li>
+            <button onclick="showSection('adeeb-group')" class="nav-btn bg-green-800 text-green-200 text-sm md:text-base">
+              Adeeb Groups FMC LLC
+            </button>
+          </li>
+          <li>
+            <button onclick="showSection('plestar-old')" class="nav-btn bg-green-800 text-green-200 text-sm md:text-base">
+              Plestar Inc @ (MAY 2018 - DEC 2018)
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <!-- CONTENT -->
+      <div class=" space-y-8">
+        <!-- Plestar Inc -->
+        <div id="plestar-current" class="content-section hidden grid grid-cols-1 lg:grid-cols-2 ">
+          <!-- Your Plestar Inc (current role) -->
+          <div class="rounded-bl-3xl rounded-tl-3xl bg-green-200 p-5 slide-left">
+            <h3 class="text-sm md:text-base font-bold text-green-800">CURRENT ROLE - PROCESS SPECIALIST & DEVELOPMENT</h3>
+            <div class="flex flex-col my-1 gap-2">
+              <h6 class="text-green-800 text-sm md:text-base font-bold">NOV 2024 - PRESENT</h6>
+              <p class="flex items-center text-green-800 text-sm md:text-base font-bold gap-2">Process Specialist - Plestar Inc <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#67aa60" viewBox="0 0 256 256"><path d="M224,216a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,216ZM80,176a8,8,0,0,0,5.66-2.34L184,75.31V152a8,8,0,0,0,16,0V56a8,8,0,0,0-8-8H96a8,8,0,0,0,0,16h76.69L74.34,162.34A8,8,0,0,0,80,176Z"></path></svg></a></p>
+            </div>
+            <p class="mt-2">
+              <p class="text-sm md:text-base">Extracts and compiles accurate data from multiple web-based tools for business analysis. Conducts in-depth data research to support project accuracy and informed decision-making.</p>
+              <p class="text-sm md:text-base">Ensures data integrity through detailed validation, cross-checking, and verification. Performs QA/QC reviews to maintain consistency, precision, and compliance with standards.</p>
+              <p class="text-sm md:text-base">Analyzes datasets to identify trends, discrepancies, and process improvement opportunities. Documents and updates research findings for easy access and workflow transparency.</p>
+              <p class="text-sm md:text-base">Collaborates with internal teams to align on data accuracy, deadlines, and quality benchmarks. Utilizes automation tools and advanced web search techniques to increase data collection efficiency by 30%.</p>
+              <p class="text-sm md:text-base">Cleans and validates data to eliminate errors, duplicates, and incomplete information. Generates daily and weekly performance reports highlighting progress, KPIs, and operational metrics.</p>
+              <p class="text-sm md:text-base">Supports continuous process improvement through feedback and analytical insights, reducing project rework by 20%. Adheres strictly to data privacy, security, and organizational compliance policies.</p>
+              <p class="text-sm md:text-base">Troubleshoots extraction errors and system issues to ensure seamless tool functionality. Trains new team
+              members on QA standards, data verification, and process workflows.</p>
+            
+            <div class="md:grid grid-cols-2 mt-3">
+              <a href="#"><div class="bg-green-800 text-green-200 rounded-full text-center text-sm md:text-base font-bold m-2 px-3 py-2">Webextract</div></a>
+              <a href="#"><div class="bg-green-800 text-green-200 rounded-full text-center text-sm md:text-base font-bold m-2 px-3 py-2">Domain Hunder</div></a>
+            </div>
+            </p>
+          </div>
+
+          <div class="rounded-br-3xl rounded-tr-3xl bg-green-800 p-5 text-green-200 slide-right">
+            <h3 class="font-bold text-green-200 my-2">DEVELOPMENT</h3>
+            <p class="text-sm md:text-base">Designed and prototyped intuitive, user-focused interfaces using Figma, ensuring clean visual hierarchy, consistent layout structure, and modern design principles.</p>
+            <p class="text-sm md:text-base">Converted Figma UI designs into fully responsive, pixel-perfect web pages using HTML5, CSS3, Tailwind CSS,Bootstrap, and JavaScript.</p>
+            <p class="text-sm md:text-base">Ensured cross-browser compatibility, accessibility, and performance optimization, resulting in smoother
+            interactions and faster load times.</p>
+            <p class="text-sm md:text-base">Collaborated with product managers, UX designers, and developers to refine user flows, improve usability, and deliver seamless end-to-end user experiences.</p>
+            <p class="text-sm md:text-base">Utilized advanced CSS techniques and frameworks Tailwind, Bootstrap to maintain scalable, maintainable, and reusable styling systems.</p>
+            <p class="text-sm md:text-base">Worked closely with development teams to integrate UI components into web applications, ensuring correct
+            functionality and visual consistency.</p>
+            <p class="text-sm md:text-base">Performed UI/UX testing, design reviews, and user feedback evaluations to enhance clarity, usability, and user satisfaction.</p>
+            <p class="text-sm md:text-base">Stayed updated with modern UI/UX trends, CSS methodologies, responsive design patterns, and design-to-development best practices to continuously improve design quality.</p>
+            <div class="md:grid grid-cols-2 mt-3">
+              <a href="#"><div class="bg-green-200 text-green-800 rounded-full text-center text-sm md:text-base font-bold m-2 px-3 py-2">HTML5 & CSS3</div></a>
+              <a href="#"><div class="bg-green-200 text-green-800 rounded-full text-center text-sm md:text-base font-bold m-2 px-3 py-2">Tailwind CSS</div></a>
+              <a href="#"><div class="bg-green-200 text-green-800 rounded-full text-center text-sm md:text-base font-bold m-2 px-3 py-2">JavaScript</div></a>
+              <a href="#"><div class="bg-green-200 text-green-800 rounded-full text-center text-sm md:text-base font-bold m-2 px-3 py-2">React</div></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Brassy Academy & Consultancy Pvt, Ltd -->
+        <div id="brassy-academy" class="content-section hidden grid grid-cols-1 gap-8 slide-right">
+          <div class="rounded-3xl bg-green-200 p-5 text-green-800">
+            <h3 class="font-bold text-sm md:text-base">Front End Developer</h3>
+            <div class="flex flex-col my-1 gap-2">
+              <h6 class="text-green-800 text-sm md:text-base font-bold">MAY 2023 - AUG 2024</h6>
+              <p class="flex items-center text-green-800 text-sm md:text-base font-bold gap-2">Front End Developer - Brassy Academy and Consultacy Pvt, Ltd<a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#67dd60" viewBox="0 0 256 256"><path d="M224,216a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,216ZM80,176a8,8,0,0,0,5.66-2.34L184,75.31V152a8,8,0,0,0,16,0V56a8,8,0,0,0-8-8H96a8,8,0,0,0,0,16h76.69L74.34,162.34A8,8,0,0,0,80,176Z"></path></svg></a></p>
+            </div>
+            <p class="mt-2">
+              <p class="text-sm md:text-base">Developed and maintained scalable, responsive web applications using React.js, JavaScript, HTML5, CSS3, Bootstrap, and Tailwind CSS, ensuring seamless user experiences across all platforms. Built dynamic, mobile-first interfaces with cross-browser compatibility and adherence to modern UI/UX design principles, enhancing design consistency by 20%.</p>
+              <p class="text-sm md:text-base">Integrated RESTful APIs to enable efficient front-end and back-end communication, improving application performance and reliability by 25%. Created interactive dashboards and reusable UI components in React.js, supporting modular architecture, role-based access, and real-time data updates.</p>
+              <p class="text-sm md:text-base">Implemented advanced data visualization elements such as charts, tables, and KPIs to deliver actionable insights for users and administrators, improving decision-making efficiency by 30%. Conducted UI testing, debugging, and performance optimization to ensure consistent quality, accessibility, and responsiveness across all devices.</p>
+              <p class="text-sm md:text-base">Collaborated with UI/UX designers and cross-functional teams in Agile workflows, contributing to a 30% increase in user engagement through intuitive feature enhancements and streamlined usability improvements.</p>
+              <p class="text-sm md:text-base">Completed freelance projects in front-end and full-stack environments using React.js and Node.js, gaining hands-on experience in deployment, client collaboration, and real-world application delivery. Possess foundational knowledge of MongoDB for managing structured and unstructured data in application development, improving database efficiency by 15%.</p>
+            </p>
+            <div class="md:grid grid-cols-4 mt-3">
+              <a href="#"><div class="bg-green-800 text-green-200 rounded-full text-center text-sm md:text-base font-bold m-2 px-3 py-2">HTML5 & CSS3</div></a>
+              <a href="#"><div class="bg-green-800 text-green-200 rounded-full text-center text-sm md:text-base font-bold m-2 px-3 py-2">Bootstrap5</div></a>
+              <a href="#"><div class="bg-green-800 text-green-200 rounded-full text-center text-sm md:text-base font-bold m-2 px-3 py-2">JavaScript</div></a>
+              <a href="#"><div class="bg-green-800 text-green-200 rounded-full text-center text-sm md:text-base font-bold m-2 px-3 py-2">TypeScript</div></a>
+              <a href="#"><div class="bg-green-800 text-green-200 rounded-full text-center text-sm md:text-base font-bold m-2 px-3 py-2">React</div></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Adeeb Groups FMC LLC -->
+        <div id="adeeb-group" class="content-section hidden grid grid-cols-1 gap-8 slide-left">
+          <div class="rounded-3xl bg-green-800 p-5 text-green-200">
+            <h3 class="font-bold text-sm md:text-base">System Admin</h3>
+            <p class="text-sm mt-2">
+              <div aria-labelledby="Adeeb Groups" class="flex flex-col rounded-3xl gap-3 p-5">
+                <div class="flex flex-col my-1 gap-2">
+                  <h6 class="text-green-200 text-sm md:text-base font-bold">APR 2021 - APR 2023</h6>
+                  <p class="flex items-center text-green-200 text-sm md:text-base font-bold gap-2">System Admin - Adeeb Group's FMC LLC<a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#67dd60" viewBox="0 0 256 256"><path d="M224,216a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,216ZM80,176a8,8,0,0,0,5.66-2.34L184,75.31V152a8,8,0,0,0,16,0V56a8,8,0,0,0-8-8H96a8,8,0,0,0,0,16h76.69L74.34,162.34A8,8,0,0,0,80,176Z"></path></svg></a></p>
+                </div>
+                <h6 class="text-green-200 text-sm md:text-base font-bold my-2">Abu Dhabi, United Arab Emirates</h6>
+                <div class="text-green-200">
+                  <p class="text-sm md:text-base">Web Development Specializing in designing and developing visually engaging, responsive websites using HTML, CSS, and frameworks like Bootstrap.</p>
+                  <p class="text-sm md:text-base">UI/UX Design and Development Skilled in crafting clean, structured code to build intuitive user interfaces that prioritize usability, accessibility, and a seamless user experience. Proficient in leveraging Bootstrap’s grid system and components to create flexible, mobile-first designs.</p>
+                  <p class="text-sm md:text-base">Responsive and Cross-Browser Compatibility Passionate about developing visually appealing websites optimized for cross-browser functionality and responsive performance across devices, ensuring a consistent experience for 100% of users.</p>
+                  <p class="text-sm md:text-base">Continuous Learning and Best Practices Stay updated with the latest web development standards, UI/UX trends, and best practices for efficient, scalable, and maintainable coding.</p>
+                  <p class="text-sm md:text-base">Front-End Design & Responsiveness Built static and responsive user interfaces using HTML and CSS, improving page load efficiency and user interaction performance by 20%</p>
+                </div>
+                <div class="md:grid grid-cols-4 mt-3">
+                  <a href="#"><div class="bg-green-200 text-green-800 rounded-full text-center text-sm md:text-base font-bold m-2 px-3 py-2">HTML5 & CSS3</div></a>
+                  <a href="#"><div class="bg-green-200 text-green-800 rounded-full text-center text-sm md:text-base font-bold m-2 px-3 py-2">Bootstrap5</div></a>
+                  <a href="#"><div class="bg-green-200 text-green-800 rounded-full text-center text-sm md:text-base font-bold m-2 px-3 py-2">JavaScript</div></a>
+                  <a href="#"><div class="bg-green-200 text-green-800 rounded-full text-center text-sm md:text-base font-bold m-2 px-3 py-2">React</div></a>
+                </div>
+              </div>
+            </p>
+          </div>
+        </div>
+
+        <div id="plestar-old" class="content-section hidden grid grid-cols-1 gap-8 slide-right">
+          <div class="rounded-3xl bg-green-200 p-5 text-green-800">
+            <h3 class="font-bold text-sm md:text-base">Process Associate</h3>
+            <p class="mt-2">
+              <div aria-labelledby="Plestar Inc" class="flex flex-col rounded-3xl gap-3 p-5">
+                <div class="flex flex-col my-1 gap-2">
+                  <h6 class="text-green-800 text-sm md:text-base font-bold">MAY 2018 - DEC 2018</h6>
+                  <p class="flex items-center text-green-800 text-sm md:text-base font-bold gap-2">Process Associate - Plestar Inc <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#67dd60" viewBox="0 0 256 256"><path d="M224,216a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,216ZM80,176a8,8,0,0,0,5.66-2.34L184,75.31V152a8,8,0,0,0,16,0V56a8,8,0,0,0-8-8H96a8,8,0,0,0,0,16h76.69L74.34,162.34A8,8,0,0,0,80,176Z"></path></svg></a></p>
+                </div>
+                <h6 class="text-green-800 text-sm md:text-base font-bold my-2">Tirunelveli, TN, India</h6>
+                
+                <div class="text-green-800">
+                  <p class="text-sm md:text-base">Delivered frontline technical support for macOS, ChromeOS, iOS, and Android devices, including setup, configuration, troubleshooting, and issue resolution.</p>
+                  <p class="text-sm md:text-base">Supported Google Workspace apps Gmail, Calendar, Drive, Meet, Chat, Docs, Sheets, Slides, handling account management, permissions, and problem resolution.</p>
+                  <p class="text-sm md:text-base">Managed user access, security settings, and integrations for critical SaaS line-of-business tools, ensuring compliance and optimized productivity. Analyzed and validated data entries for errors, inconsistencies, and anomalies to ensure delivery of high-quality outputs.</p>
+                  <p class="text-sm md:text-base">Conducted detailed quality checks on non-voice BPO processes, ensuring accuracy, consistency, and adherence to company standards and client requirements.</p>
+                  <p class="text-sm md:text-base">Maintained and updated comprehensive records of quality control (QC) activities, findings, and corrective actions using Microsoft Outlook, Excel, Word, PowerPoint, and Canva.</p>
+                  <p class="text-sm md:text-base">Documented workflows and created knowledge resources to improve transparency, efficiency, and compliance across teams.</p>
+                  <p class="text-sm md:text-base">Stayed updated on emerging technologies, quality standards, and innovative practices to continuously improve processes and service delivery.</p>
+                </div>
+                <div class="md:grid grid-cols-4 mt-3">
+                  <a href="#"><div class="bg-green-800 text-green-200 rounded-full text-center text-sm md:text-base font-bold m-2 px-3 py-2">Webextract</div></a>
+                  <a href="#"><div class="bg-green-800 text-green-200 rounded-full text-center text-sm md:text-base font-bold m-2 px-3 py-2">Domain Hunder</div></a>
+                </div>
+              </div>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section aria-labelledby="Skills-section" class="mb-5">
+      <div aria-labelledby="Skills-content" class="py-5">
+        <h1 class="text-2xl text-green-200 font-bold mb-5">SKILLS</h1>
+          <div class="flex gap-16 flex-wrap justify-center">
+            <!-- Skill -->
+            <div class="relative w-32 h-32">
+              <!-- Rotating Border -->
+              <div class="absolute inset-0 rounded-full border-4 border-green-200 spin-slow skills-set"></div>
+              <!-- Inner Circle -->
+              <div class="absolute inset-3 rounded-full bg-green-800 flex items-center justify-center">
+                <span class="text-green-200 font-bold text-xs">
+                  HTML5
+                </span>
+              </div>
+            </div>
+            <div class="relative w-32 h-32">
+              <div class="absolute inset-0 rounded-full border-4 border-green-200 spin-slow skills-set"></div>
+              <div class="absolute inset-3 rounded-full bg-green-800 flex items-center justify-center">
+                <span class="text-green-200 font-bold text-xs">
+                  CSS3
+                </span>
+              </div>
+            </div>
+            <div class="relative w-32 h-32">
+              <div class="absolute inset-0 rounded-full border-4 border-green-200 spin-slow skills-set"></div>
+              <div class="absolute inset-3 rounded-full bg-green-800 flex items-center justify-center">
+                <span class="text-green-200 font-bold text-xs">
+                  BOOTSTRAP5
+                </span>
+              </div>
+            </div>
+            <div class="relative w-32 h-32">
+              <div class="absolute inset-0 rounded-full border-4 border-green-200 spin-slow skills-set"></div>
+              <div class="absolute inset-3 rounded-full bg-green-800 flex items-center justify-center">
+                <span class="text-green-200 font-bold text-xs">
+                  JS
+                </span>
+              </div>
+            </div>
+            <div class="relative w-32 h-32">
+              <div class="absolute inset-0 rounded-full border-4 border-green-200 spin-slow skills-set"></div>
+              <div class="absolute inset-3 rounded-full bg-green-800 flex items-center justify-center">
+                <span class="text-green-200 font-bold text-xs">
+                  REACT
+                </span>
+              </div>
+            </div>
+        </div>
+      </div>
+     </section>
+
+    <!-- Footer -->
+    <section aria-labelledby="Footer" class="mb-5">
+      <footer class="grid grid-cols-1 justify-center items-center lg:grid-cols-3 bg-green-800 text-green-200 rounded-br-3xl rounded-bl-3xl px-6 py-12 gap-5">
+        <div class="flex flex-col gap-5 justify-center items-center">
+          <img src="./assets/B.jpg" alt="Basithlogo" class="b-logo rounded-full w-32" />
+          <p class="basith">BASITH ABDUL KADER</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <h1 class="text-green-200 font-medium text-xs md:text-sm">Contact Details</h1>
+          <div class="hr"></div>
+          <ul class="flex flex-col items-center gap-2 text-sm">
+              <li><a href="#" class="text-green-200 hover:text-white text-xs md:text-sm">+91 (819) 092-7571</a></li>
+              <li><a href="#" class="text-green-200 hover:text-white text-xs md:text-sm">basithkanar@gmail.com</a></li>
+              <li><a href="#" class="text-green-200 hover:text-white text-xs md:text-sm">abdulbasith@gmail.com</a></li>
+          </ul>
+        </div>
+        <div class="max-w-6xl mx-auto flex flex-col gap-8">
+          <nav aria-label="Footer Navigation">
+            <ul class="flex flex-wrap justify-center gap-8 text-xs md:text-sm font-medium">
+              <li>
+                <a href="/" class="hover:text-white transition">About</a>
+              </li>
+              <li>
+                <a href="/" class="hover:text-white transition">Blog</a>
+              </li>
+              <li>
+                <a href="/" class="hover:text-white transition">Jobs</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- SOCIAL ICONS -->
+           <marquee width="full" direction="right" scrollamount="2" height="30px">
+            <div class="flex items-center justify-center gap-6 text-green-200">
+              <!-- Facebook -->
+              <a href="https://www.facebook.com/basith.bass.480240" target="_blank" aria-label="Facebook"
+                class="hover:text-white transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 256 256">
+                  <path d="M232,128a104,104,0,1,0-120,103.7V158H88V128h24V104c0-23.7,14.3-36.8,35.3-36.8A143.5,143.5,0,0,1,168,69v24h-12c-11.8,0-15.5,7.3-15.5,14.8V128h26l-4.2,30H140.5v73.7A104,104,0,0,0,232,128Z"/>
+                </svg>
+              </a>
+
+              <!-- X (Twitter) -->
+              <a href="https://x.com/BasithA34171943" target="_blank" aria-label="X"
+                class="hover:text-white transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 256 256">
+                  <path d="M215.7,40H176L128,96.6,80,40H40l66.7,80L40,216H80l48-56.6L176,216h39.7l-66.7-80Z"/>
+                </svg>
+              </a>
+
+              <!-- GitHub -->
+              <a href="https://github.com/Basithabdu" target="_blank" aria-label="GitHub"
+                class="hover:text-white transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 256 256">
+                  <path d="M128,24A104,104,0,0,0,24,128c0,45.2,29.5,83.5,70.4,97.1,5.1.9,7-2.2,7-4.9,0-2.4-.1-10.2-.1-18.5-28.6,6.2-34.6-12.1-34.6-12.1-4.7-11.9-11.5-15.1-11.5-15.1-9.4-6.4.7-6.3.7-6.3,10.4.7,15.9,10.7,15.9,10.7,9.2,15.9,24.2,11.3,30.1,8.6.9-6.7,3.6-11.3,6.5-13.9-22.8-2.6-46.8-11.4-46.8-50.7a39.7,39.7,0,0,1,10.6-27.6c-1.1-2.6-4.6-13.1,1-27.4,0,0,8.6-2.8,28.2,10.5a97.6,97.6,0,0,1,51.4,0c19.6-13.3,28.2-10.5,28.2-10.5,5.6,14.3,2.1,24.8,1,27.4A39.7,39.7,0,0,1,192,123c0,39.4-24.1,48.1-47,50.7,3.7,3.2,7,9.4,7,18.9,0,13.7-.1,24.7-.1,28.1,0,2.7,1.9,5.9,7.1,4.9A104,104,0,0,0,232,128,104,104,0,0,0,128,24Z"/>
+                </svg>
+              </a>
+
+              <!-- YouTube -->
+              <a href="https://www.youtube.com/@mpmnot5456" target="_blank" aria-label="YouTube"
+                class="hover:text-white transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 256 256">
+                  <path d="M232,128c0-35.3-2.4-44.4-6.9-52.4a32,32,0,0,0-14.7-14.7C202.4,56.4,193.3,54,128,54s-74.4,2.4-82.4,6.9A32,32,0,0,0,30.9,75.6C26.4,83.6,24,92.7,24,128s2.4,44.4,6.9,52.4a32,32,0,0,0,14.7,14.7c8,4.5,17.1,6.9,82.4,6.9s74.4-2.4,82.4-6.9a32,32,0,0,0,14.7-14.7C229.6,172.4,232,163.3,232,128ZM104,160V96l56,32Z"/>
+                </svg>
+              </a>
+            </div>
+           </marquee>
+          <!-- COPYRIGHT -->
+          <p class="text-sm text-center text-green-200/80">
+            © 2024 Basith Inc.
+          </p>
+        </div>
+      </footer>
+    </section>
+  </section>
+</body>
+</html>
